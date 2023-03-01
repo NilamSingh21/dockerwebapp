@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t nilamsingh21/dockerwebappImage:$BUILD_NUMBER .'
+                sh 'docker build -t nilamsingh21/dockerwebappimage:$BUILD_NUMBER .'
             }
         }
         
@@ -24,7 +24,7 @@ pipeline {
         
         stage('push image') {
             steps{
-                sh 'docker push nilamsingh21/dockerwebappImage:$BUILD_NUMBER'
+                sh 'docker push nilamsingh21/dockerwebappimage:$BUILD_NUMBER'
             }
         }
     }
